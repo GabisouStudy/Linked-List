@@ -19,10 +19,21 @@ namespace Lista_Encadeada
 
         //Recipe rcp = new Recipe();
 
+        LinkedList list = new LinkedList();
+
         private void addButton_Click(object sender, EventArgs e)
         {
             //tempIng = new Ingredient();
             //rcp.AddPosition();
+            list.Add(int.Parse(indexBox.Value + ""), enterValue.Text);
+            printBox.Text = "Lista:";
+
+            for (int i = 0; i < list.Count; i++ ) {
+                printBox.Text += "\n Index: "+ i + "    |   Element: " + list.Get(i);
+            }
+
+            indexBox.Maximum++;
+            indexBox.Value++;
         }
     }
 }
