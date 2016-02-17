@@ -24,6 +24,10 @@ namespace Lista_Encadeada
             get { return this.count; }
         }
 
+        public object this[int index]{
+            get { return this.Get(index); }
+        }
+
         public object Add(int index, object o) {
             if (index < 0)
                 throw new ArgumentOutOfRangeException("Index: " + index);
@@ -59,7 +63,7 @@ namespace Lista_Encadeada
             if (this.Empty)
                 return null;
 
-            if (index > this.count)
+            if (index >= this.count)
                 index = count - 1;
 
             Node current = this.head;
@@ -80,6 +84,46 @@ namespace Lista_Encadeada
             count--;
 
             return result;
+        }
+
+        public void Clear(){
+            this.head = null;
+            this.count = 0; 
+        }
+
+        public int IndexOf(object o){
+            Node current = this.head;
+
+            for (int i = 0; i < this.count; i++) {
+                if (current.Data.Equals(o))
+                    return i;
+
+                current = current.Next;
+            }
+
+            return -1;
+        }
+
+        public bool Contains(object o){
+            return this.IndexOf(o) >= 0;
+        }
+
+        public object Get(int index){
+            if (index < 0)
+                throw new ArgumentOutOfRangeException("Index: " + index);
+
+            if (this.Empty)
+                return null;
+
+            if (index > this.count)
+                index = this.count - 1;
+
+            Node current = this.head;
+
+            for(int i = 0; i < index; i++)
+                current = current.Next;
+
+            return current.Data;
         }
     }
 }
