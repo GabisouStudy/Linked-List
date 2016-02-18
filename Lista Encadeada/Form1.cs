@@ -48,5 +48,19 @@ namespace Lista_Encadeada
                 indexBox.Value = list.Count;
             }
         }
+
+        private void getButton_Click(object sender, EventArgs e)
+        {
+            list.AddNext(int.Parse(indexBox.Value + ""), enterValue.Text);
+            printBox.Text = "Lista:";
+
+            for (int i = 0; i < list.Count; i++)
+            {
+                printBox.Text += "\n Index: " + i + "    |   Element: " + list.Get(i);
+            }
+
+            indexBox.Maximum++;
+            indexBox.Value = list.Count;
+        }
     }
 }

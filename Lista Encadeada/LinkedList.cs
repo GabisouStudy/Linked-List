@@ -96,21 +96,26 @@ namespace Lista_Encadeada
             this.head = null; 
         }
 
-        public int IndexOf(object o){
+        public List<int> IndexOf(object o){
             Node current = this.head;
-
+            List<int> values = new List<int>();
             for (int i = 0; i < this.Count; i++) {
-                if (current.Data.Equals(o))
-                    return i;
+                if (current.Data.Equals(o)){
+                    values.Add(i);
+                }
 
                 current = current.Next;
             }
 
-            return -1;
+            if (values.Count < 1) {
+                values.Add(-1);
+            }
+
+            return values;
         }
 
         public bool Contains(object o){
-            return this.IndexOf(o) >= 0;
+            return this.IndexOf(o)[0] >= 0;
         }
 
         public object Get(int index){
@@ -171,6 +176,15 @@ namespace Lista_Encadeada
             }
 
             return pre_n;
+        }
+
+        public void AddNext(object o, object d){
+            List<int> pos = new List<int>();
+
+            pos = IndexOf(o);
+
+            for (int i = 0; i < pos.Count; i++)
+                Add(pos[i + 1], d);
         }
     }
 }

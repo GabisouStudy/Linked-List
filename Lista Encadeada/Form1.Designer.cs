@@ -36,6 +36,9 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.changeButton = new System.Windows.Forms.Button();
+            this.getButton = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.indexBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -70,10 +73,10 @@
             // 
             // printBox
             // 
-            this.printBox.Location = new System.Drawing.Point(12, 65);
+            this.printBox.Location = new System.Drawing.Point(12, 94);
             this.printBox.Name = "printBox";
             this.printBox.ReadOnly = true;
-            this.printBox.Size = new System.Drawing.Size(405, 391);
+            this.printBox.Size = new System.Drawing.Size(405, 362);
             this.printBox.TabIndex = 4;
             this.printBox.Text = "";
             // 
@@ -112,11 +115,40 @@
             this.changeButton.Text = "Troca!";
             this.changeButton.UseVisualStyleBackColor = true;
             // 
+            // getButton
+            // 
+            this.getButton.Location = new System.Drawing.Point(12, 65);
+            this.getButton.Name = "getButton";
+            this.getButton.Size = new System.Drawing.Size(125, 23);
+            this.getButton.TabIndex = 9;
+            this.getButton.Text = "Adicionar após o valor:";
+            this.getButton.UseVisualStyleBackColor = true;
+            this.getButton.Click += new System.EventHandler(this.getButton_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(274, 68);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(143, 20);
+            this.textBox1.TabIndex = 10;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(143, 65);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(125, 23);
+            this.button1.TabIndex = 11;
+            this.button1.Text = "Remover após o valor:";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(430, 468);
+            this.ClientSize = new System.Drawing.Size(431, 468);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.getButton);
             this.Controls.Add(this.changeButton);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBox1);
@@ -144,6 +176,9 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Button changeButton;
+        private System.Windows.Forms.Button getButton;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button1;
 
     }
 }
