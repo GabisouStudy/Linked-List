@@ -130,24 +130,47 @@ namespace Lista_Encadeada
 
             return current.Data;
         }
+        public void Change(Node n1, Node n2) {
+            if (this.head == null || n1 == null || n2 == null)
+                throw new ArgumentOutOfRangeException("Count: " + this.Count);
 
-        public Node GetPrevious(Node a) {
-            if (this.head == a)
+            Node pre_n1 = GetPrevious(n1);
+            Node pre_n2 = GetPrevious(n2);
+
+            if (pre_n1 != null) pre_n1.Next = n2;
+            if (pre_n2 != null) pre_n2.Next = n1;
+
+            Node temp;
+
+            temp = n1.Next;
+            n1.Next = n2.Next;
+            n2.Next = temp;
+
+            if (this.head == n1){
+                this.head = n2;
+            }
+            else if(this.head == n2){
+                this.head = n1;
+            }
+        }
+
+        public Node GetPrevious(Node n) {
+            if (this.head == n)
                 return null;
 
             Node temp = this.head;
-            Node pre_a = null;
+            Node pre_n = null;
 
-            while(temp != null && temp != a){
-                pre_a = temp;
+            while(temp != null && temp != n){
+                pre_n = temp;
                 temp = temp.Next;
             }
 
-            if(temp != a){
+            if(temp != n){
                 throw new ArgumentOutOfRangeException("Maximum: " + this.Count);
             }
 
-            return pre_a;
+            return pre_n;
         }
     }
 }
