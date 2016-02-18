@@ -9,19 +9,28 @@ namespace Lista_Encadeada
     class LinkedList
     {
         private Node head;
-        private int count;
 
         public LinkedList(){
             this.head = null;
-            this.count = 0;
+            //this.count = 0;
         }
 
+        public int Count
+        {
+            get
+            {
+                int count = 0;
+                Node current = this.head;
+                while (current != null)
+                {
+                    current = current.Next;
+                    count++;
+                }
+                return count;
+            }
+        }
         public bool Empty {
-            get { return this.count == 0; }
-        }
-
-        public int Count{
-            get { return this.count; }
+            get { return this.Count == 0; }
         }
 
         public object this[int index]{
@@ -32,8 +41,8 @@ namespace Lista_Encadeada
             if (index < 0)
                 throw new ArgumentOutOfRangeException("Index: " + index);
 
-            if (index > count)
-                index = count;
+            if (index > this.Count)
+                index = this.Count;
 
             Node current = this.head;
 
@@ -47,13 +56,11 @@ namespace Lista_Encadeada
                 current.Next = new Node(o, current.Next);
             }
 
-            count++;
-
             return o;
         }
 
         public object Add(object o){
-            return this.Add(count, o);
+            return this.Add(this.Count, o);
         }
 
         public object Remove(int index){
@@ -63,8 +70,8 @@ namespace Lista_Encadeada
             if (this.Empty)
                 return null;
 
-            if (index >= this.count)
-                index = count - 1;
+            if (index >= this.Count)
+                index = this.Count - 1;
 
             Node current = this.head;
             object result = null;
@@ -81,20 +88,18 @@ namespace Lista_Encadeada
 
                 current.Next = current.Next.Next;
             }
-            count--;
 
             return result;
         }
 
         public void Clear(){
-            this.head = null;
-            this.count = 0; 
+            this.head = null; 
         }
 
         public int IndexOf(object o){
             Node current = this.head;
 
-            for (int i = 0; i < this.count; i++) {
+            for (int i = 0; i < this.Count; i++) {
                 if (current.Data.Equals(o))
                     return i;
 
@@ -115,8 +120,8 @@ namespace Lista_Encadeada
             if (this.Empty)
                 return null;
 
-            if (index > this.count)
-                index = this.count - 1;
+            if (index > this.Count)
+                index = this.Count - 1;
 
             Node current = this.head;
 
@@ -125,5 +130,12 @@ namespace Lista_Encadeada
 
             return current.Data;
         }
+
+        
+
+        /*
+        public void Change(Node n1, Node n2) {
+            Node tmp = n1;
+        }*/
     }
 }
