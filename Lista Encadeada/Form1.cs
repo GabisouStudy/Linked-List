@@ -49,9 +49,9 @@ namespace Lista_Encadeada
             }
         }
 
-        private void getButton_Click(object sender, EventArgs e)
+        private void addNextButton_Click(object sender, EventArgs e)
         {
-            list.AddNext(int.Parse(indexBox.Value + ""), enterValue.Text);
+            list.AddNext(int.Parse(indexBox.Value + ""), findValue.Text);
             printBox.Text = "Lista:";
 
             for (int i = 0; i < list.Count; i++)
@@ -61,6 +61,32 @@ namespace Lista_Encadeada
 
             indexBox.Maximum++;
             indexBox.Value = list.Count;
+        }
+
+        private void remAtButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void value_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void UpdateList(object sender, EventArgs e)
+        {
+            List<object> elements = list.ToList();
+
+            for (int i = 0; i < elements.Count; i++)
+            {
+                value1.DataSource = elements;
+                value2.DataSource = elements;
+            }
+
+            if (list.Count == 0)
+            {
+                elements.Clear();
+            }
         }
     }
 }

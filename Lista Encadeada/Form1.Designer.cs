@@ -28,17 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
             this.enterValue = new System.Windows.Forms.TextBox();
             this.addButton = new System.Windows.Forms.Button();
             this.indexBox = new System.Windows.Forms.NumericUpDown();
             this.printBox = new System.Windows.Forms.RichTextBox();
             this.remButton = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.changeButton = new System.Windows.Forms.Button();
-            this.getButton = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.addNextButtom = new System.Windows.Forms.Button();
+            this.findValue = new System.Windows.Forms.TextBox();
+            this.remAtButton = new System.Windows.Forms.Button();
+            this.value1 = new System.Windows.Forms.ListBox();
+            this.value2 = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.indexBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -73,10 +74,10 @@
             // 
             // printBox
             // 
-            this.printBox.Location = new System.Drawing.Point(12, 94);
+            this.printBox.Location = new System.Drawing.Point(12, 170);
             this.printBox.Name = "printBox";
             this.printBox.ReadOnly = true;
-            this.printBox.Size = new System.Drawing.Size(405, 362);
+            this.printBox.Size = new System.Drawing.Size(405, 286);
             this.printBox.TabIndex = 4;
             this.printBox.Text = "";
             // 
@@ -90,75 +91,82 @@
             this.remButton.UseVisualStyleBackColor = true;
             this.remButton.Click += new System.EventHandler(this.remButton_Click);
             // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(12, 38);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(159, 21);
-            this.comboBox1.TabIndex = 6;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(177, 38);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(159, 21);
-            this.comboBox2.TabIndex = 7;
-            // 
             // changeButton
             // 
-            this.changeButton.Location = new System.Drawing.Point(342, 36);
+            this.changeButton.Location = new System.Drawing.Point(342, 42);
             this.changeButton.Name = "changeButton";
-            this.changeButton.Size = new System.Drawing.Size(75, 23);
+            this.changeButton.Size = new System.Drawing.Size(75, 30);
             this.changeButton.TabIndex = 8;
             this.changeButton.Text = "Troca!";
             this.changeButton.UseVisualStyleBackColor = true;
             // 
-            // getButton
+            // addNextButtom
             // 
-            this.getButton.Location = new System.Drawing.Point(12, 65);
-            this.getButton.Name = "getButton";
-            this.getButton.Size = new System.Drawing.Size(125, 23);
-            this.getButton.TabIndex = 9;
-            this.getButton.Text = "Adicionar após o valor:";
-            this.getButton.UseVisualStyleBackColor = true;
-            this.getButton.Click += new System.EventHandler(this.getButton_Click);
+            this.addNextButtom.Location = new System.Drawing.Point(12, 78);
+            this.addNextButtom.Name = "addNextButtom";
+            this.addNextButtom.Size = new System.Drawing.Size(125, 23);
+            this.addNextButtom.TabIndex = 9;
+            this.addNextButtom.Text = "Adicionar após o valor:";
+            this.addNextButtom.UseVisualStyleBackColor = true;
+            this.addNextButtom.Click += new System.EventHandler(this.addNextButton_Click);
             // 
-            // textBox1
+            // findValue
             // 
-            this.textBox1.Location = new System.Drawing.Point(274, 68);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(143, 20);
-            this.textBox1.TabIndex = 10;
+            this.findValue.Location = new System.Drawing.Point(274, 78);
+            this.findValue.Name = "findValue";
+            this.findValue.Size = new System.Drawing.Size(143, 20);
+            this.findValue.TabIndex = 10;
             // 
-            // button1
+            // remAtButton
             // 
-            this.button1.Location = new System.Drawing.Point(143, 65);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(125, 23);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Remover após o valor:";
-            this.button1.UseVisualStyleBackColor = true;
+            this.remAtButton.Location = new System.Drawing.Point(143, 78);
+            this.remAtButton.Name = "remAtButton";
+            this.remAtButton.Size = new System.Drawing.Size(125, 23);
+            this.remAtButton.TabIndex = 11;
+            this.remAtButton.Text = "Remover após o valor:";
+            this.remAtButton.UseVisualStyleBackColor = true;
+            this.remAtButton.Click += new System.EventHandler(this.remAtButton_Click);
+            // 
+            // value1
+            // 
+            this.value1.FormattingEnabled = true;
+            this.value1.Location = new System.Drawing.Point(12, 42);
+            this.value1.Name = "value1";
+            this.value1.Size = new System.Drawing.Size(159, 30);
+            this.value1.TabIndex = 12;
+            this.value1.Click += new System.EventHandler(this.UpdateList);
+            // 
+            // value2
+            // 
+            this.value2.FormattingEnabled = true;
+            this.value2.Location = new System.Drawing.Point(177, 42);
+            this.value2.Name = "value2";
+            this.value2.Size = new System.Drawing.Size(159, 30);
+            this.value2.TabIndex = 13;
+            this.value2.Click += new System.EventHandler(this.UpdateList);
             // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(431, 468);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.getButton);
+            this.Controls.Add(this.value2);
+            this.Controls.Add(this.value1);
+            this.Controls.Add(this.remAtButton);
+            this.Controls.Add(this.findValue);
+            this.Controls.Add(this.addNextButtom);
             this.Controls.Add(this.changeButton);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.remButton);
             this.Controls.Add(this.printBox);
             this.Controls.Add(this.indexBox);
             this.Controls.Add(this.addButton);
             this.Controls.Add(this.enterValue);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "MainWindow";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lista";
             ((System.ComponentModel.ISupportInitialize)(this.indexBox)).EndInit();
             this.ResumeLayout(false);
@@ -173,12 +181,12 @@
         private System.Windows.Forms.NumericUpDown indexBox;
         private System.Windows.Forms.RichTextBox printBox;
         private System.Windows.Forms.Button remButton;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Button changeButton;
-        private System.Windows.Forms.Button getButton;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button addNextButtom;
+        private System.Windows.Forms.TextBox findValue;
+        private System.Windows.Forms.Button remAtButton;
+        private System.Windows.Forms.ListBox value1;
+        private System.Windows.Forms.ListBox value2;
 
     }
 }

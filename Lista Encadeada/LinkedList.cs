@@ -186,5 +186,15 @@ namespace Lista_Encadeada
             for (int i = 0; i < pos.Count; i++)
                 Add(pos[i + 1], d);
         }
+
+        public List<object> ToList(){
+            List<object> nodes = new List<object>();
+
+            for (int i = 0; i < this.Count; i++ ) {
+                nodes.Add(Get(i));
+            }
+
+            return nodes;
+        }
     }
 }
