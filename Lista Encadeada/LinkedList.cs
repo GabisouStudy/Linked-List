@@ -65,7 +65,7 @@ namespace Lista_Encadeada
 
         public object Remove(int index){
             if (index < 0)
-                throw new ArgumentOutOfRangeException("Index: " + index);
+                return null;
 
             if (this.Empty)
                 return null;
@@ -178,13 +178,21 @@ namespace Lista_Encadeada
             return pre_n;
         }
 
-        public void AddNext(object o, object d){
+        public object AddNext(object d, object o){
             List<int> pos = new List<int>();
 
             pos = IndexOf(o);
 
-            for (int i = 0; i < pos.Count; i++)
-                Add(pos[i + 1], d);
+            if (pos[0] == -1)
+                return null;
+
+            for (int i = 0; i < pos.Count; i++){
+                Add((pos[i] + 1), d);
+                pos = IndexOf(o);
+            }
+
+
+            return pos[0];
         }
 
         public List<object> ToList(){

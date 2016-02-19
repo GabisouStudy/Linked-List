@@ -28,8 +28,9 @@ namespace Lista_Encadeada
                 printBox.Text += "\n Index: "+ i + "    |   Element: " + list.Get(i);
             }
 
-            indexBox.Maximum++;
+            indexBox.Maximum = list.Count;
             indexBox.Value = list.Count;
+            UpdateList();
         }
 
         private void remButton_Click(object sender, EventArgs e)
@@ -44,14 +45,16 @@ namespace Lista_Encadeada
                     printBox.Text += "\n Index: " + i + "    |   Element: " + list.Get(i);
                 }
 
-                indexBox.Maximum--;
+                indexBox.Maximum = list.Count;
                 indexBox.Value = list.Count;
+                UpdateList();
             }
         }
 
         private void addNextButton_Click(object sender, EventArgs e)
         {
-            list.AddNext(int.Parse(indexBox.Value + ""), findValue.Text);
+
+            list.AddNext(enterValue.Text, findValue.Text);
             printBox.Text = "Lista:";
 
             for (int i = 0; i < list.Count; i++)
@@ -59,13 +62,32 @@ namespace Lista_Encadeada
                 printBox.Text += "\n Index: " + i + "    |   Element: " + list.Get(i);
             }
 
-            indexBox.Maximum++;
+            indexBox.Maximum = list.Count;
             indexBox.Value = list.Count;
+            UpdateList();
         }
 
         private void remAtButton_Click(object sender, EventArgs e)
         {
+            List<int> pos = new List<int>();
 
+            pos = list.IndexOf(findValue.Text);
+
+            while (pos[0] != -1) {
+                list.Remove(pos[0]);
+                pos = list.IndexOf(findValue.Text);
+            }
+
+            printBox.Text = "Lista:";
+
+            for (int i = 0; i < list.Count; i++)
+            {
+                printBox.Text += "\n Index: " + i + "    |   Element: " + list.Get(i);
+            }
+
+            indexBox.Maximum = list.Count;
+            indexBox.Value = list.Count;
+            UpdateList();
         }
 
         private void value_Click(object sender, EventArgs e)
@@ -73,15 +95,10 @@ namespace Lista_Encadeada
             
         }
 
-        private void UpdateList(object sender, EventArgs e)
+        private void UpdateList()
         {
             List<object> elements = list.ToList();
-
-            for (int i = 0; i < elements.Count; i++)
-            {
-                value1.DataSource = elements;
-                value2.DataSource = elements;
-            }
+            List<object> elements2 = list.ToList();
 
             if (list.Count == 0)
             {

@@ -38,23 +38,27 @@
             this.addNextButtom = new System.Windows.Forms.Button();
             this.findValue = new System.Windows.Forms.TextBox();
             this.remAtButton = new System.Windows.Forms.Button();
-            this.value1 = new System.Windows.Forms.ListBox();
-            this.value2 = new System.Windows.Forms.ListBox();
+            this.change1 = new System.Windows.Forms.NumericUpDown();
+            this.change2 = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.indexBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.change1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.change2)).BeginInit();
             this.SuspendLayout();
             // 
             // enterValue
             // 
-            this.enterValue.Location = new System.Drawing.Point(12, 12);
+            this.enterValue.Location = new System.Drawing.Point(18, 18);
+            this.enterValue.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.enterValue.Name = "enterValue";
-            this.enterValue.Size = new System.Drawing.Size(159, 20);
+            this.enterValue.Size = new System.Drawing.Size(236, 26);
             this.enterValue.TabIndex = 0;
             // 
             // addButton
             // 
-            this.addButton.Location = new System.Drawing.Point(261, 10);
+            this.addButton.Location = new System.Drawing.Point(392, 15);
+            this.addButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.addButton.Name = "addButton";
-            this.addButton.Size = new System.Drawing.Size(75, 23);
+            this.addButton.Size = new System.Drawing.Size(112, 35);
             this.addButton.TabIndex = 1;
             this.addButton.Text = "Adicionar";
             this.addButton.UseVisualStyleBackColor = true;
@@ -62,30 +66,33 @@
             // 
             // indexBox
             // 
-            this.indexBox.Location = new System.Drawing.Point(177, 12);
+            this.indexBox.Location = new System.Drawing.Point(266, 18);
+            this.indexBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.indexBox.Maximum = new decimal(new int[] {
             0,
             0,
             0,
             0});
             this.indexBox.Name = "indexBox";
-            this.indexBox.Size = new System.Drawing.Size(78, 20);
+            this.indexBox.Size = new System.Drawing.Size(117, 26);
             this.indexBox.TabIndex = 3;
             // 
             // printBox
             // 
-            this.printBox.Location = new System.Drawing.Point(12, 170);
+            this.printBox.Location = new System.Drawing.Point(18, 165);
+            this.printBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.printBox.Name = "printBox";
             this.printBox.ReadOnly = true;
-            this.printBox.Size = new System.Drawing.Size(405, 286);
+            this.printBox.Size = new System.Drawing.Size(606, 535);
             this.printBox.TabIndex = 4;
             this.printBox.Text = "";
             // 
             // remButton
             // 
-            this.remButton.Location = new System.Drawing.Point(342, 10);
+            this.remButton.Location = new System.Drawing.Point(513, 15);
+            this.remButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.remButton.Name = "remButton";
-            this.remButton.Size = new System.Drawing.Size(75, 23);
+            this.remButton.Size = new System.Drawing.Size(112, 35);
             this.remButton.TabIndex = 5;
             this.remButton.Text = "Remover";
             this.remButton.UseVisualStyleBackColor = true;
@@ -93,18 +100,20 @@
             // 
             // changeButton
             // 
-            this.changeButton.Location = new System.Drawing.Point(342, 42);
+            this.changeButton.Location = new System.Drawing.Point(513, 65);
+            this.changeButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.changeButton.Name = "changeButton";
-            this.changeButton.Size = new System.Drawing.Size(75, 30);
+            this.changeButton.Size = new System.Drawing.Size(112, 46);
             this.changeButton.TabIndex = 8;
             this.changeButton.Text = "Troca!";
             this.changeButton.UseVisualStyleBackColor = true;
             // 
             // addNextButtom
             // 
-            this.addNextButtom.Location = new System.Drawing.Point(12, 78);
+            this.addNextButtom.Location = new System.Drawing.Point(18, 120);
+            this.addNextButtom.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.addNextButtom.Name = "addNextButtom";
-            this.addNextButtom.Size = new System.Drawing.Size(125, 23);
+            this.addNextButtom.Size = new System.Drawing.Size(188, 35);
             this.addNextButtom.TabIndex = 9;
             this.addNextButtom.Text = "Adicionar após o valor:";
             this.addNextButtom.UseVisualStyleBackColor = true;
@@ -112,46 +121,56 @@
             // 
             // findValue
             // 
-            this.findValue.Location = new System.Drawing.Point(274, 78);
+            this.findValue.Location = new System.Drawing.Point(388, 124);
+            this.findValue.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.findValue.Name = "findValue";
-            this.findValue.Size = new System.Drawing.Size(143, 20);
+            this.findValue.Size = new System.Drawing.Size(236, 26);
             this.findValue.TabIndex = 10;
             // 
             // remAtButton
             // 
-            this.remAtButton.Location = new System.Drawing.Point(143, 78);
+            this.remAtButton.Location = new System.Drawing.Point(214, 120);
+            this.remAtButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.remAtButton.Name = "remAtButton";
-            this.remAtButton.Size = new System.Drawing.Size(125, 23);
+            this.remAtButton.Size = new System.Drawing.Size(167, 35);
             this.remAtButton.TabIndex = 11;
-            this.remAtButton.Text = "Remover após o valor:";
+            this.remAtButton.Text = "Remover no valor:";
             this.remAtButton.UseVisualStyleBackColor = true;
             this.remAtButton.Click += new System.EventHandler(this.remAtButton_Click);
             // 
-            // value1
+            // change1
             // 
-            this.value1.FormattingEnabled = true;
-            this.value1.Location = new System.Drawing.Point(12, 42);
-            this.value1.Name = "value1";
-            this.value1.Size = new System.Drawing.Size(159, 30);
-            this.value1.TabIndex = 12;
-            this.value1.Click += new System.EventHandler(this.UpdateList);
+            this.change1.Location = new System.Drawing.Point(13, 76);
+            this.change1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.change1.Maximum = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.change1.Name = "change1";
+            this.change1.Size = new System.Drawing.Size(236, 26);
+            this.change1.TabIndex = 12;
             // 
-            // value2
+            // change2
             // 
-            this.value2.FormattingEnabled = true;
-            this.value2.Location = new System.Drawing.Point(177, 42);
-            this.value2.Name = "value2";
-            this.value2.Size = new System.Drawing.Size(159, 30);
-            this.value2.TabIndex = 13;
-            this.value2.Click += new System.EventHandler(this.UpdateList);
+            this.change2.Location = new System.Drawing.Point(262, 76);
+            this.change2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.change2.Maximum = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.change2.Name = "change2";
+            this.change2.Size = new System.Drawing.Size(236, 26);
+            this.change2.TabIndex = 13;
             // 
             // MainWindow
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(431, 468);
-            this.Controls.Add(this.value2);
-            this.Controls.Add(this.value1);
+            this.ClientSize = new System.Drawing.Size(646, 720);
+            this.Controls.Add(this.change2);
+            this.Controls.Add(this.change1);
             this.Controls.Add(this.remAtButton);
             this.Controls.Add(this.findValue);
             this.Controls.Add(this.addNextButtom);
@@ -163,12 +182,15 @@
             this.Controls.Add(this.enterValue);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "MainWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lista";
             ((System.ComponentModel.ISupportInitialize)(this.indexBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.change1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.change2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -185,9 +207,8 @@
         private System.Windows.Forms.Button addNextButtom;
         private System.Windows.Forms.TextBox findValue;
         private System.Windows.Forms.Button remAtButton;
-        private System.Windows.Forms.ListBox value1;
-        private System.Windows.Forms.ListBox value2;
-
+        private System.Windows.Forms.NumericUpDown change1;
+        private System.Windows.Forms.NumericUpDown change2;
     }
 }
 
