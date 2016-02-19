@@ -126,5 +126,10 @@ namespace Lista_Encadeada
                 printBox.Text += "\n Index: " + i + "    |   Element: " + list.Get(i).Data;
             }
         }
+
+        private void CreditSite_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("http://github.com/Gabriel-de-Souza");
+        }
     }
 }

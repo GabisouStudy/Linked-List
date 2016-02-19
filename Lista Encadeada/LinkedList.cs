@@ -135,9 +135,9 @@ namespace Lista_Encadeada
 
             return current;
         }
-        public void Change(Node n1, Node n2) {
+        public Node Change(Node n1, Node n2) {
             if (this.head == null || n1 == null || n2 == null)
-                throw new ArgumentOutOfRangeException("Count: " + this.Count);
+                return null;
 
             Node pre_n1 = GetPrevious(n1);
             Node pre_n2 = GetPrevious(n2);
@@ -157,6 +157,7 @@ namespace Lista_Encadeada
             else if(this.head == n2){
                 this.head = n1;
             }
+            return temp;
         }
 
         public Node GetPrevious(Node n) {
