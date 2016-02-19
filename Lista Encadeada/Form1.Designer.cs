@@ -107,6 +107,7 @@
             this.changeButton.TabIndex = 8;
             this.changeButton.Text = "Troca!";
             this.changeButton.UseVisualStyleBackColor = true;
+            this.changeButton.Click += new System.EventHandler(this.changeButton_Click);
             // 
             // addNextButtom
             // 

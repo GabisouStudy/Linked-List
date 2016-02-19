@@ -118,7 +118,7 @@ namespace Lista_Encadeada
             return this.IndexOf(o)[0] >= 0;
         }
 
-        public object Get(int index){
+        public Node Get(int index){
             if (index < 0)
                 throw new ArgumentOutOfRangeException("Index: " + index);
 
@@ -133,7 +133,7 @@ namespace Lista_Encadeada
             for(int i = 0; i < index; i++)
                 current = current.Next;
 
-            return current.Data;
+            return current;
         }
         public void Change(Node n1, Node n2) {
             if (this.head == null || n1 == null || n2 == null)

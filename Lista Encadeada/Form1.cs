@@ -25,12 +25,17 @@ namespace Lista_Encadeada
             printBox.Text = "Lista:";
 
             for (int i = 0; i < list.Count; i++ ) {
-                printBox.Text += "\n Index: "+ i + "    |   Element: " + list.Get(i);
+                printBox.Text += "\n Index: "+ i + "    |   Element: " + list.Get(i).Data;
             }
 
             indexBox.Maximum = list.Count;
             indexBox.Value = list.Count;
-            UpdateList();
+
+            change1.Maximum = list.Count;
+            change1.Value = list.Count;
+
+            change2.Maximum = list.Count;
+            change2.Value = list.Count;
         }
 
         private void remButton_Click(object sender, EventArgs e)
@@ -42,12 +47,17 @@ namespace Lista_Encadeada
 
                 for (int i = 0; i < list.Count; i++)
                 {
-                    printBox.Text += "\n Index: " + i + "    |   Element: " + list.Get(i);
+                    printBox.Text += "\n Index: " + i + "    |   Element: " + list.Get(i).Data;
                 }
 
                 indexBox.Maximum = list.Count;
                 indexBox.Value = list.Count;
-                UpdateList();
+
+                change1.Maximum = list.Count;
+                change1.Value = list.Count;
+
+                change2.Maximum = list.Count;
+                change2.Value = list.Count;
             }
         }
 
@@ -59,12 +69,17 @@ namespace Lista_Encadeada
 
             for (int i = 0; i < list.Count; i++)
             {
-                printBox.Text += "\n Index: " + i + "    |   Element: " + list.Get(i);
+                printBox.Text += "\n Index: " + i + "    |   Element: " + list.Get(i).Data;
             }
 
             indexBox.Maximum = list.Count;
             indexBox.Value = list.Count;
-            UpdateList();
+
+            change1.Maximum = list.Count;
+            change1.Value = list.Count;
+
+            change2.Maximum = list.Count;
+            change2.Value = list.Count;
         }
 
         private void remAtButton_Click(object sender, EventArgs e)
@@ -82,12 +97,17 @@ namespace Lista_Encadeada
 
             for (int i = 0; i < list.Count; i++)
             {
-                printBox.Text += "\n Index: " + i + "    |   Element: " + list.Get(i);
+                printBox.Text += "\n Index: " + i + "    |   Element: " + list.Get(i).Data;
             }
 
             indexBox.Maximum = list.Count;
             indexBox.Value = list.Count;
-            UpdateList();
+
+            change1.Maximum = list.Count;
+            change1.Value = list.Count;
+
+            change2.Maximum = list.Count;
+            change2.Value = list.Count;
         }
 
         private void value_Click(object sender, EventArgs e)
@@ -95,14 +115,15 @@ namespace Lista_Encadeada
             
         }
 
-        private void UpdateList()
+        private void changeButton_Click(object sender, EventArgs e)
         {
-            List<object> elements = list.ToList();
-            List<object> elements2 = list.ToList();
+            list.Change(list.Get(int.Parse(change1.Value + "")), list.Get(int.Parse(change2.Value + "")));
 
-            if (list.Count == 0)
+            printBox.Text = "Lista:";
+
+            for (int i = 0; i < list.Count; i++)
             {
-                elements.Clear();
+                printBox.Text += "\n Index: " + i + "    |   Element: " + list.Get(i).Data;
             }
         }
     }
