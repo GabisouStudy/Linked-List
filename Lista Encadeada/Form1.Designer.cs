@@ -60,16 +60,18 @@
             // 
             // enterValue
             // 
-            this.enterValue.Location = new System.Drawing.Point(9, 16);
+            this.enterValue.Location = new System.Drawing.Point(14, 25);
+            this.enterValue.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.enterValue.Name = "enterValue";
-            this.enterValue.Size = new System.Drawing.Size(405, 20);
+            this.enterValue.Size = new System.Drawing.Size(606, 26);
             this.enterValue.TabIndex = 0;
             // 
             // addButton
             // 
-            this.addButton.Location = new System.Drawing.Point(258, 13);
+            this.addButton.Location = new System.Drawing.Point(387, 20);
+            this.addButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.addButton.Name = "addButton";
-            this.addButton.Size = new System.Drawing.Size(75, 23);
+            this.addButton.Size = new System.Drawing.Size(112, 35);
             this.addButton.TabIndex = 1;
             this.addButton.Text = "Adicionar";
             this.addButton.UseVisualStyleBackColor = true;
@@ -77,30 +79,33 @@
             // 
             // indexBox
             // 
-            this.indexBox.Location = new System.Drawing.Point(118, 13);
+            this.indexBox.Location = new System.Drawing.Point(177, 20);
+            this.indexBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.indexBox.Maximum = new decimal(new int[] {
             0,
             0,
             0,
             0});
             this.indexBox.Name = "indexBox";
-            this.indexBox.Size = new System.Drawing.Size(134, 20);
+            this.indexBox.Size = new System.Drawing.Size(201, 26);
             this.indexBox.TabIndex = 3;
             // 
             // printBox
             // 
-            this.printBox.Location = new System.Drawing.Point(13, 220);
+            this.printBox.Location = new System.Drawing.Point(20, 338);
+            this.printBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.printBox.Name = "printBox";
             this.printBox.ReadOnly = true;
-            this.printBox.Size = new System.Drawing.Size(422, 277);
+            this.printBox.Size = new System.Drawing.Size(631, 424);
             this.printBox.TabIndex = 4;
             this.printBox.Text = "";
             // 
             // remButton
             // 
-            this.remButton.Location = new System.Drawing.Point(339, 13);
+            this.remButton.Location = new System.Drawing.Point(508, 20);
+            this.remButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.remButton.Name = "remButton";
-            this.remButton.Size = new System.Drawing.Size(75, 23);
+            this.remButton.Size = new System.Drawing.Size(112, 35);
             this.remButton.TabIndex = 5;
             this.remButton.Text = "Remover";
             this.remButton.UseVisualStyleBackColor = true;
@@ -108,9 +113,10 @@
             // 
             // changeButton
             // 
-            this.changeButton.Location = new System.Drawing.Point(339, 10);
+            this.changeButton.Location = new System.Drawing.Point(508, 15);
+            this.changeButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.changeButton.Name = "changeButton";
-            this.changeButton.Size = new System.Drawing.Size(75, 32);
+            this.changeButton.Size = new System.Drawing.Size(112, 49);
             this.changeButton.TabIndex = 8;
             this.changeButton.Text = "Troca!";
             this.changeButton.UseVisualStyleBackColor = true;
@@ -118,9 +124,10 @@
             // 
             // addNextButtom
             // 
-            this.addNextButtom.Location = new System.Drawing.Point(6, 19);
+            this.addNextButtom.Location = new System.Drawing.Point(9, 29);
+            this.addNextButtom.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.addNextButtom.Name = "addNextButtom";
-            this.addNextButtom.Size = new System.Drawing.Size(125, 23);
+            this.addNextButtom.Size = new System.Drawing.Size(188, 35);
             this.addNextButtom.TabIndex = 9;
             this.addNextButtom.Text = "Adicionar após o valor:";
             this.addNextButtom.UseVisualStyleBackColor = true;
@@ -128,16 +135,18 @@
             // 
             // findValue
             // 
-            this.findValue.Location = new System.Drawing.Point(253, 22);
+            this.findValue.Location = new System.Drawing.Point(380, 34);
+            this.findValue.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.findValue.Name = "findValue";
-            this.findValue.Size = new System.Drawing.Size(159, 20);
+            this.findValue.Size = new System.Drawing.Size(236, 26);
             this.findValue.TabIndex = 10;
             // 
             // remAtButton
             // 
-            this.remAtButton.Location = new System.Drawing.Point(137, 19);
+            this.remAtButton.Location = new System.Drawing.Point(206, 29);
+            this.remAtButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.remAtButton.Name = "remAtButton";
-            this.remAtButton.Size = new System.Drawing.Size(111, 23);
+            this.remAtButton.Size = new System.Drawing.Size(166, 35);
             this.remAtButton.TabIndex = 11;
             this.remAtButton.Text = "Remover no valor:";
             this.remAtButton.UseVisualStyleBackColor = true;
@@ -145,34 +154,37 @@
             // 
             // change1
             // 
-            this.change1.Location = new System.Drawing.Point(51, 19);
+            this.change1.Location = new System.Drawing.Point(76, 29);
+            this.change1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.change1.Maximum = new decimal(new int[] {
             0,
             0,
             0,
             0});
             this.change1.Name = "change1";
-            this.change1.Size = new System.Drawing.Size(112, 20);
+            this.change1.Size = new System.Drawing.Size(168, 26);
             this.change1.TabIndex = 12;
             // 
             // change2
             // 
-            this.change2.Location = new System.Drawing.Point(221, 18);
+            this.change2.Location = new System.Drawing.Point(332, 28);
+            this.change2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.change2.Maximum = new decimal(new int[] {
             0,
             0,
             0,
             0});
             this.change2.Name = "change2";
-            this.change2.Size = new System.Drawing.Size(112, 20);
+            this.change2.Size = new System.Drawing.Size(168, 26);
             this.change2.TabIndex = 13;
             // 
             // textIndex
             // 
             this.textIndex.AutoSize = true;
-            this.textIndex.Location = new System.Drawing.Point(6, 18);
+            this.textIndex.Location = new System.Drawing.Point(9, 28);
+            this.textIndex.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.textIndex.Name = "textIndex";
-            this.textIndex.Size = new System.Drawing.Size(101, 13);
+            this.textIndex.Size = new System.Drawing.Size(150, 20);
             this.textIndex.TabIndex = 15;
             this.textIndex.Text = "Índice do Elemento:";
             // 
@@ -182,9 +194,11 @@
             this.groupBox1.Controls.Add(this.addButton);
             this.groupBox1.Controls.Add(this.indexBox);
             this.groupBox1.Controls.Add(this.remButton);
-            this.groupBox1.Location = new System.Drawing.Point(12, 60);
+            this.groupBox1.Location = new System.Drawing.Point(18, 92);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(423, 42);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox1.Size = new System.Drawing.Size(634, 65);
             this.groupBox1.TabIndex = 16;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Modificações por Índice";
@@ -196,9 +210,11 @@
             this.groupBox2.Controls.Add(this.change1);
             this.groupBox2.Controls.Add(this.changeButton);
             this.groupBox2.Controls.Add(this.change2);
-            this.groupBox2.Location = new System.Drawing.Point(12, 108);
+            this.groupBox2.Location = new System.Drawing.Point(18, 166);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(423, 45);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox2.Size = new System.Drawing.Size(634, 69);
             this.groupBox2.TabIndex = 17;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Sistema de TROCA!";
@@ -206,18 +222,20 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(176, 20);
+            this.label2.Location = new System.Drawing.Point(264, 31);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(39, 13);
+            this.label2.Size = new System.Drawing.Size(56, 20);
             this.label2.TabIndex = 15;
             this.label2.Text = "Índice:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 21);
+            this.label1.Location = new System.Drawing.Point(9, 32);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(39, 13);
+            this.label1.Size = new System.Drawing.Size(56, 20);
             this.label1.TabIndex = 14;
             this.label1.Text = "Índice:";
             // 
@@ -226,9 +244,11 @@
             this.groupBox3.Controls.Add(this.addNextButtom);
             this.groupBox3.Controls.Add(this.findValue);
             this.groupBox3.Controls.Add(this.remAtButton);
-            this.groupBox3.Location = new System.Drawing.Point(12, 159);
+            this.groupBox3.Location = new System.Drawing.Point(18, 245);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(423, 55);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox3.Size = new System.Drawing.Size(634, 85);
             this.groupBox3.TabIndex = 18;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Modificações por Valor";
@@ -236,9 +256,11 @@
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.enterValue);
-            this.groupBox4.Location = new System.Drawing.Point(12, 12);
+            this.groupBox4.Location = new System.Drawing.Point(18, 18);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(422, 42);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox4.Size = new System.Drawing.Size(633, 65);
             this.groupBox4.TabIndex = 19;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Valor do Elemento Adicionado";
@@ -246,18 +268,20 @@
             // CreditText
             // 
             this.CreditText.AutoSize = true;
-            this.CreditText.Location = new System.Drawing.Point(10, 500);
+            this.CreditText.Location = new System.Drawing.Point(15, 769);
+            this.CreditText.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.CreditText.Name = "CreditText";
-            this.CreditText.Size = new System.Drawing.Size(174, 13);
+            this.CreditText.Size = new System.Drawing.Size(257, 20);
             this.CreditText.TabIndex = 20;
             this.CreditText.Text = "Desenvolvido por Gabriel de Souza";
             // 
             // CreditSite
             // 
             this.CreditSite.AutoSize = true;
-            this.CreditSite.Location = new System.Drawing.Point(259, 500);
+            this.CreditSite.Location = new System.Drawing.Point(388, 769);
+            this.CreditSite.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.CreditSite.Name = "CreditSite";
-            this.CreditSite.Size = new System.Drawing.Size(176, 13);
+            this.CreditSite.Size = new System.Drawing.Size(256, 20);
             this.CreditSite.TabIndex = 21;
             this.CreditSite.TabStop = true;
             this.CreditSite.Text = "http://github.com/Gabriel-de-Souza";
@@ -265,9 +289,9 @@
             // 
             // MainWindow
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(447, 527);
+            this.ClientSize = new System.Drawing.Size(670, 822);
             this.Controls.Add(this.CreditSite);
             this.Controls.Add(this.CreditText);
             this.Controls.Add(this.groupBox4);
@@ -277,8 +301,10 @@
             this.Controls.Add(this.printBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(692, 878);
             this.Name = "MainWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lista";
